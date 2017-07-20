@@ -14,8 +14,7 @@ function testGetNLVHtml() {
   var noteList = new NoteList();
   noteList.pushToNotes(note);
   var controller = new NoteController(noteList);
-
-  assert.isTrue(controller.getNLVHtml() === "<ul><li><div>no mocks!</div></li></ul>")
+  assert.isTrue(controller.getNLVHtml() === "<ul><li><div id='12'>no mocks!</div></li></ul>")
 }
 
 testGetNLVHtml();
