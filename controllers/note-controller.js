@@ -13,12 +13,7 @@
   };
 
   NoteController.prototype.getNLVHtml = function() {
-    var string = this.noteListView.toHtml();
-    this.addNoteToPage(string);
-  };
-
-  NoteController.prototype.addNoteToPage = function(html) {
-    document.getElementById("app").innerHTML = html;
+    return this.noteListView.toHtml();
   };
 
   exports.NoteController = NoteController;
