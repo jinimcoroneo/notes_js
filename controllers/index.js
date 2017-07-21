@@ -4,5 +4,5 @@ noteList.pushToNotes(note);
 var controller = new NoteController(noteList);
 
 window.onload = function() {
-  document.getElementById("app").innerHTML = controller.getNLVHtml();
+  document.getElementById("app").innerHTML = controller.getLinkHtml();
 }

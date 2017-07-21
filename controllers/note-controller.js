@@ -12,9 +12,11 @@
     return this.noteListView;
   };
 
-  NoteController.prototype.getNLVHtml = function() {
+  NoteController.prototype.getLinkHtml = function() {
     return this.noteListView.toHtml();
   };
+
+  
 
   exports.NoteController = NoteController;
 })(this);

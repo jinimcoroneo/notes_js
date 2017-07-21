@@ -9,12 +9,32 @@ function testNoteController() {
 
 testNoteController();
 
-function testGetNLVHtml() {
+function testGetLinkHtml() {
   var note = new Note("no mocks!")
   var noteList = new NoteList();
   noteList.pushToNotes(note);
   var controller = new NoteController(noteList);
-  assert.isTrue(controller.getNLVHtml() === "<ul><li><div id='12'>no mocks!</div></li></ul>")
+  assert.isTrue(controller.getLinkHtml() === "<ul><li><a href='#12'>no mocks!</a></li></ul>")
 }
 
-testGetNLVHtml();
+testGetLinkHtml();
+
+function testGetSingleNoteViewHtml() {
+  var note = new Note("no mocks!");
+  var noteList = new NoteList();
+  noteList.pushToNotes(note);
+  var controller = new NoteController(noteList);
+  assert.isTrue(controller.getSingleNoteViewHtml() === "<div>no mocks!</div>")
+}
+
+testGetSingleNoteViewHtml();
+
+// function testCreateSingleNoteView() {
+//   var note = new Note("no mocks!");
+//   var noteList = new NoteList();
+//   noteList.pushToNotes(note);
+//   var controller = new NoteController(noteList);
+//   assert.isTrue(controller.createSingleNoteView === )
+// }
+
+testCreateSingleNoteView();
