@@ -21,11 +21,12 @@ function testPushToNotes() {
 
 testPushToNotes();
 
-function testGetTexts() {
+function testGetSingleNoteHtml() {
   var note = new Note("Too sexy to code");
+  note.uniqueId = 0
   var noteList = new NoteList();
   noteList.pushToNotes(note);
-  assert.isTrue(noteList.getTexts().toString() === "Too sexy to code")
-};
+  assert.isTrue(noteList.getSingleNoteHtml(note.uniqueId) === "<div>Too sexy to code</div>")
+}
 
-testGetTexts();
+testGetSingleNoteHtml();
